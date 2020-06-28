@@ -1,0 +1,116 @@
+<!-- For Mobile -->
+<!-- Humberger Begin -->
+<div class="humberger__menu__overlay"></div>
+<div class="humberger__menu__wrapper">
+  <div class="humberger__menu__logo">
+    <a href="#">
+      <img src="/static/img/logo2.png" alt="" height="50" width="119" />
+    </a>
+  </div>
+  <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'grid' %}">Shop</a></li>
+            <li><a href="{% url 'blog_detail' %}">Blog</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if request.user.is_authenticated == False %}
+            <li>
+              <a  href="/login/auth0">Log In/Register</a>
+            </li>
+            {% endif %} {% if request.user.is_authenticated == True %}
+            <li>
+              <a  href="/profile">Profile</a>
+            </li>
+            <li>
+              <a  href="/register">Seller?</a>
+            </li>
+            <li>
+              <a href="/logout">Log Out</a>
+            </li>
+            {% endif %}
+
+
+  <!-- only when buyer will login-->
+  <!-- <div class="humberger__menu__cart">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-heart"></i> <span>1</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a>
+          </li>
+        </ul>
+        <div class="header__cart__price">item: <span>$150.00</span></div>
+      </div>  -->
+
+  <!-- Humberger End -->
+</div>
+
+<!-- For Laptop View -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="header__logo">
+          <a href="./index.html"
+            ><img src="/static/img/logo2.png" alt="" height="50" width="119"
+          /></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <nav class="header__menu">
+          <ul>
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'grid' %}">Shop</a></li>
+            <li><a href="{% url 'blog_detail' %}">Blog</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <!-- If buyer will login no Sign IN/UP should be there and this should be available <li><a href="./checkout.html">Check Out</a></li> -->
+            <!-- If Manufacturer will login no Sign IN/UP should be there and these two should be available <li>
+                    <a href="#">Sing IN/UP</a>
+                    <ul class="header__menu__dropdown">
+                    <li><a href="./shop-details.html">Profile</a></li>
+                    <li><a href="./shoping-cart.html">Products Detail</a></li>
+                    </ul>
+                </li> -->
+            {% if request.user.is_authenticated == False %}
+            <li>
+              <a class="nav-link" href="/login/auth0">Log In/Register</a>
+            </li>
+            {% endif %} {% if request.user.is_authenticated == True %}
+            <li>
+              <a class="nav-link" href="/profile">Profile</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/register">Seller?</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+       <!--IF Buyer will login this should be visible-->
+      {% if request.user.is_authenticated == True %}
+            <div class="col-lg-3">
+            <div class="header__cart">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-heart"></i> <span>0</span></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-shopping-bag"></i> <span>0</span></a
+                  >
+                </li>
+              </ul>
+              <div class="header__cart__price">item: <span>Rs 0.00</span></div>
+            </div>
+          </div>
+          {% endif %}
+    </div>
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+<!-- Department choice same for all pages -->

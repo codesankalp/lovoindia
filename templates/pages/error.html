@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seller Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'assets/css/util.css' %}" type="text/css" />
+<!--===============================================================================================-->
+</head>
+<body>
+
+  <div class="contact1">
+    <div class="container-contact1">
+      <div class="contact1-pic js-tilt" data-tilt>
+        <img src="{% static 'img/logo.png' %}" alt="IMG">
+      </div>
+
+      <h2>{{ msg }}</h2>
+
+    </div>
+  </div>
+
+
+
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/tilt/tilt.jquery.min.js' %}"></script>
+  <script >
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/js/main2.js' %}"></script>
+
+</body>
+</html>

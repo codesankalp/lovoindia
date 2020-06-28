@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seller Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'assets/css/util.css' %}" type="text/css" />
+<!--===============================================================================================-->
+</head>
+<body>
+
+  <div class="contact1">
+    <div class="container-contact1">
+      <div class="contact1-pic js-tilt" data-tilt>
+        <img src="{% static 'img/logo.png' %}" alt="IMG">
+      </div>
+      {% if value == 1 %}
+        <h2>Already Registered Go Back to Profile</h2>
+      {% else %}
+
+      <form class="contact1-form validate-form" action="../register/" method="POST">{% csrf_token %}
+        <span class="contact1-form-title">
+          Register as seller
+        </span>
+
+        <div class="wrap-input1 validate-input" data-validate = "Name is required">
+          <input class="input1" type="text" name="name" placeholder="Name" value="{{user.first_name}}" readonly>
+          <span class="shadow-input1"></span>
+        </div>
+        <div class="wrap-input1 validate-input" data-validate = "Username is required">
+          <input class="input1" type="text" name="username" placeholder="User Name" value="{{user.username}}" readonly>
+          <span class="shadow-input1"></span>
+        </div>
+        <div class="wrap-input1 validate-input" data-validate = "Brand name is required">
+          <input class="input1" type="text" name="brand" placeholder="Brand Name">
+          <span class="shadow-input1"></span>
+        </div>
+
+
+
+        <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input1" type="text" name="email" placeholder="Email" value="{{user.email}}" readonly>
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "Address is required for seller">
+          <input class="input1" type="text" name="address" placeholder="Address">
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "Phone number is required">
+          <input class="input1" type="tel" name="phone" placeholder="Phone Number">
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "password is required">
+          <input class="input1" type="password" name="password" placeholder="Password">
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="container-contact1-form-btn">
+          <button class="contact1-form-btn">
+            <span>
+              Register
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+
+
+
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/tilt/tilt.jquery.min.js' %}"></script>
+  <script >
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/js/main2.js' %}"></script>
+
+</body>
+</html>

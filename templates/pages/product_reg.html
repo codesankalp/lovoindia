@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seller Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'assets/css/util.css' %}" type="text/css" />
+<!--===============================================================================================-->
+</head>
+<body>
+
+  <div class="contact1">
+    <div class="container-contact1">
+      <div class="contact1-pic js-tilt" data-tilt>
+        <img src="{% static 'img/logo.png' %}" alt="IMG">
+      </div>
+
+      <form class="contact1-form validate-form" action="../productregister/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <span class="contact1-form-title">
+          Product Registration
+        </span>
+
+        <div class="wrap-input1 validate-input" data-validate = "Product name is required">
+          <input class="input1" type="text" name="name" placeholder="Product Name"  >
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "Product name is required">
+          <textarea name="description" rows="6" cols="30" class="input1">Write Product Description</textarea>
+        <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "Price is required">
+          <input class="input1" type="Number" name="price" placeholder="Price in Rs.">
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "Upload Image">
+          <label for="image" class="input1" placeholder=""><h4>Product Image</h4></label>
+          <input id="id_image" type="file" name="image" class="input1" accept="image/*">
+          <span class="shadow-input1"></span>
+        </div>
+
+        <div class="wrap-input1 validate-input" data-validate = "required">
+           <label class="input1" for="category" name = "category"><h4>Category:</h4></label>
+              <select name="category" id="category" class="input1">
+                <option value="1" >Uncategorized</option>
+                <option value="2">Beauty and Personal Care</option>
+                <option value="3" >Wooden Utensils</option>
+                <option value="4">Stationary</option>
+                <option value="5" selected="">Clay Pots</option>
+              </select>
+       <span class="shadow-input1"></span>
+     </div>
+
+        <div class="container-contact1-form-btn">
+          <button class="contact1-form-btn">
+            <span>
+              Register
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'assets/vendor/tilt/tilt.jquery.min.js' %}"></script>
+  <script >
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+  <script src="{% static 'assets/js/main2.js' %}"></script>
+
+</body>
+</html>

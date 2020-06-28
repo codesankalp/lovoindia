@@ -1,0 +1,336 @@
+{% extends "layouts/base.html" %} {% block title %}
+Indian | Home {% endblock title %} {% block content %}
+<!-- Hero Section Begin -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="hero__categories">
+          <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>All departments</span>
+          </div>
+          <ul>
+            <li><a href="#">Clay Pots</a></li>
+            <li><a href="#">Self Care</a></li>
+            <li><a href="#">School Stationary</a></li>
+            <li><a href="#">Wooden Utensils</a></li>
+            <li><a href="#">Home Equipements</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="hero__search">
+          <div class="hero__search__form">
+            <form action="#">
+              <div class="hero__search__categories">
+                All Categories
+                <span class="arrow_carrot-down"></span>
+              </div>
+              <input type="text" placeholder="What do yo u need?" />
+              <button type="submit" class="site-btn">SEARCH</button>
+            </form>
+          </div>
+          <div class="hero__search__phone">
+            <div class="hero__search__phone__icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="hero__search__phone__text">
+              <h5>+65 11.188.888</h5>
+              <span>support 24/7 time</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hero__item set-bg"
+          data-setbg="/static/img/hero/banner2.jpg"
+        >
+          <div class="hero__text">
+            <span>INDIAN MANUFACTURER</span>
+            <h2>Products <br />100% Indian</h2>
+            <a href="{% url 'grid' %}" class="primary-btn">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->
+  <!-- Categories Section Begin -->
+  <section class="categories">
+    <div class="container">
+      <div class="row">
+        <div class="categories__slider owl-carousel">
+          <div class="col-lg-3">
+            <div
+              class="categories__item set-bg"
+              data-setbg="/static/img/categories/selfcare.jpeg"
+            >
+              <h5><a href="#">Self Care</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="categories__item set-bg"
+              data-setbg="/static/img/categories/stationary.jpg"
+            >
+              <h5><a href="#">School Stationary</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="categories__item set-bg"
+              data-setbg="/static/img/categories/wooden.jpg"
+            >
+              <h5><a href="#">Wooden Utensils</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="categories__item set-bg"
+              data-setbg="/static/img/categories/cat4.jpg"
+            >
+              <h5><a href="#">Pots</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div
+              class="categories__item set-bg"
+              data-setbg="/static/img/categories/home.jpeg"
+            >
+              <h5><a href="#">Home Appliances</a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Categories Section End -->
+  <!-- Featured Section Begin -->
+  <section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Product</h2>
+                </div>
+            </div>
+        </div>
+        <ul>
+<div class="row featured__filter">
+  {% for i in product %}
+  <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+        
+            <div class="featured__item">
+                <div class="featured__item__pic set-bg" data-setbg= "static/images/{{ i.image }}">
+                    <ul class="featured__item__pic__hover">
+                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="featured__item__text">
+                    <h6><a href="#">{{ i.name }} </a></h6>
+                    <h5>Rs.{{ i.price }}</h5>
+                </div>
+                </div>
+            </div>
+
+          {% endfor %}
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img1.webp">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Set of utensils</a></h6>
+                        <h5>Rs.300.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img2.jpeg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Ceiling Fan</a></h6>
+                        <h5>Rs.200.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img3.jpeg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Wooden Table</a></h6>
+                        <h5>Rs.500.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img4.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bima Soap</a></h6>
+                        <h5>Rs.30.00 per piece</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img5.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Patanjali Cream</a></h6>
+                        <h5>Rs.90.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img7.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Clay Pot with Tap</a></h6>
+                        <h5>Rs.150.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img6.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Wooden Spoon Set</a></h6>
+                        <h5>Rs.400.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="static/img/featured/img8.jpeg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Clay Cattle</a></h6>
+                        <h5>Rs.200.00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured Section End -->
+
+  <!-- Blog Section Begin -->
+  <section class="from-blog spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title from-blog__title">
+            <h2>From The Blog</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="blog__item">
+            <div class="blog__item__pic">
+              <img src="/static/img/blog/blog1.jpg" alt="" />
+            </div>
+            <div class="blog__item__text">
+              <ul>
+                <li><i class="fa fa-calendar-o"></i> May 4,2020</li>
+                <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="#">Indian Small Scale Manufacturer</a></h5>
+              <p>
+                Sed quia non numquam modi tempora indunt ut labore et dolore
+                magnam aliquam quaerat
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="blog__item">
+            <div class="blog__item__pic">
+              <img src="/static/img/blog/blo2.jpg" alt="" />
+            </div>
+            <div class="blog__item__text">
+              <ul>
+                <li><i class="fa fa-calendar-o"></i> May 22, 2020</li>
+                <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="#">6 Benifits on Health of Clay pot Water</a></h5>
+              <p>
+                Sed quia non numquam modi tempora indunt ut labore et dolore
+                magnam aliquam quaerat
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="blog__item">
+            <div class="blog__item__pic">
+              <img src="/static/img/blog/blog3.jpg" alt="" />
+            </div>
+            <div class="blog__item__text">
+              <ul>
+                <li><i class="fa fa-calendar-o"></i> May 24, 2020</li>
+                <li><i class="fa fa-comment-o"></i> 5</li>
+              </ul>
+              <h5><a href="#">Importance of Indian Self Care in Coronavirus</a></h5>
+              <p>
+                Sed quia non numquam modi tempora indunt ut labore et dolore
+                magnam aliquam quaerat
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Blog Section End -->
+  {% endblock content %}
+</div>

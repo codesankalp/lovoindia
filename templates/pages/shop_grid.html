@@ -1,0 +1,593 @@
+{% extends "layouts/base.html" %} {% block title %} Shop grid
+{% endblock title %} {% block content %}
+<!-- Hero Section Begin -->
+<section class="hero hero-normal">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="hero__categories">
+          <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>All departments</span>
+          </div>
+          <ul>
+            <li><a href="#">Clay Pots</a></li>
+            <li><a href="#">Self Care</a></li>
+            <li><a href="#">School Stationary</a></li>
+            <li><a href="#">Wooden Utensils</a></li>
+            <li><a href="#">Home Equipements</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="hero__search">
+          <div class="hero__search__form">
+            <form action="#">
+              <div class="hero__search__categories">
+                All Categories
+                <span class="arrow_carrot-down"></span>
+              </div>
+              <input type="text" placeholder="What do yo u need?" />
+              <button type="submit" class="site-btn">SEARCH</button>
+            </form>
+          </div>
+          <div class="hero__search__phone">
+            <div class="hero__search__phone__icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="hero__search__phone__text">
+              <h5>+65 11.188.888</h5>
+              <span>support 24/7 time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb Section Begin -->
+<!-- Product Section Begin -->
+<section class="product spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-5">
+        <div class="sidebar">
+          <div class="sidebar__item">
+            <h4>Department</h4>
+            <ul>
+              <li><a href="#">Clay Pots</a></li>
+              <li><a href="#">Self Care</a></li>
+              <li><a href="#">School Stationary</a></li>
+              <li><a href="#">Wooden Utensils</a></li>
+              <li><a href="#">Home Equipements</a></li>
+            </ul>
+          </div>
+          <div class="sidebar__item">
+            <h4>Price</h4>
+            <div class="price-range-wrap">
+              <div
+                class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                data-min="10"
+                data-max="540"
+              >
+                <div
+                  class="ui-slider-range ui-corner-all ui-widget-header"
+                ></div>
+                <span
+                  tabindex="0"
+                  class="ui-slider-handle ui-corner-all ui-state-default"
+                ></span>
+                <span
+                  tabindex="0"
+                  class="ui-slider-handle ui-corner-all ui-state-default"
+                ></span>
+              </div>
+              <div class="range-slider">
+                <div class="price-input">
+                  <input type="text" id="minamount" />
+                  <input type="text" id="maxamount" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__item">
+            <h4>Popular Brands</h4>
+            <div class="blog__sidebar__item__tags">
+              <a href="#">Patanjali</a>
+              <a href="#">Usha</a>
+              <a href="#">TATA</a>
+              <a href="#">Prolin</a>
+              <a href="#">Park Avenue</a>
+              <a href="#">Titan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-7">
+        <div class="product__discount">
+          <div class="section-title product__discount__title">
+            <h2>Sale Off</h2>
+          </div>
+          <div class="row">
+            <div class="product__discount__slider owl-carousel">
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img1.jpeg"
+                  >
+                    <div class="product__discount__percent">-30%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Wooden Utensils</span>
+                    <h5><a href="#">Wooden Bowl</a></h5>
+                    <div class="product__item__price">
+                      Rs.150.00 <span>Rs.500.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img2.jpg"
+                  >
+                    <div class="product__discount__percent">-50%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Wooden Utensils</span>
+                    <h5><a href="#">Wooden Basket</a></h5>
+                    <div class="product__item__price">
+                      Rs.100.00 <span>Rs.200.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img3.jpg"
+                  >
+                    <div class="product__discount__percent">-50%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Self Care</span>
+                    <h5><a href="#">Ayurvedic Soap Set</a></h5>
+                    <div class="product__item__price">
+                      Rs.150.00 <span>Rs.300.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img4.jpg"
+                  >
+                    <div class="product__discount__percent">-40%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Self Care</span>
+                    <h5><a href="#">Soap Set</a></h5>
+                    <div class="product__item__price">
+                      Rs.200.00 <span>Rs.350.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img5.jpg"
+                  >
+                    <div class="product__discount__percent">-20%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Home Decor</span>
+                    <h5><a href="#">Rope Handicraft Set</a></h5>
+                    <div class="product__item__price">
+                      Rs.450.00 <span>Rs.500.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="product__discount__item">
+                  <div
+                    class="product__discount__item__pic set-bg"
+                    data-setbg="/static/img/product/discount/img6.jpeg"
+                  >
+                    <div class="product__discount__percent">-20%</div>
+                    <ul class="product__item__pic__hover">
+                      <li>
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="product__discount__item__text">
+                    <span>Home Appliances</span>
+                    <h5><a href="#">Table Fan</a></h5>
+                    <div class="product__item__price">
+                      Rs.450.00 <span>Rs.500.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title product__discount__title">
+          <h2>Available Products</h2>
+        </div>
+        <div class="row">
+          {% for i in product %}
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/images/{{ i.image }}"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">{{ i.name }}</a></h6>
+                <h5>Rs.{{ i.price }}</h5>
+              </div>
+            </div>
+          </div>{% endfor %}
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img2.jpeg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Ceiling Fan</a></h6>
+                <h5>Rs.150.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img3.jpeg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Wooden Table</a></h6>
+                <h5>Rs.300.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img8.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Crab Pool Security</a></h6>
+                <h5>Rs.30.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img4.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Bima Soap</a></h6>
+                <h5>Rs.30.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img5.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Patanjali Cream</a></h6>
+                <h5>Rs.90.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img7.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Clay Pot with Tap</a></h6>
+                <h5>Rs.150.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img6.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Wooden Spoon Set</a></h6>
+                <h5>Rs.200.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="static/img/featured/img8.jpeg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Clay Cattel</a></h6>
+                <h5>Rs.300.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="/static/img/product/discount/img1.jpeg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Wooden Bowl</a></h6>
+                <h5>Rs.200.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="/static/img/product/discount/img3.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Ayurvedic Soap Set</a></h6>
+                <h5>Rs.350.00</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="/static/img/product/discount/img5.jpg"
+              >
+                <ul class="product__item__pic__hover">
+                  <li>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__item__text">
+                <h6><a href="#">Roap Handicraft Set</a></h6>
+                <h5>Rs.300.00</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__pagination">
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+        </div>
+      
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+{% endblock content %}
